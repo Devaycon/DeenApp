@@ -1,0 +1,96 @@
+html {
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 210px);
+  grid-template-rows: 70px repeat(2, 210px) 80px;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  box-sizing: border-box;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.items {
+  background-color: rgb(133, 202, 202);
+  border: solid 3px rgb(1, 46, 46);
+  background-size: contain;
+}
+
+.items:hover {
+  background-color: rgb(1, 46, 46);
+  cursor: pointer;
+}
+
+.reset-btn,
+.matrix-btn {
+  color: rgb(133, 202, 202);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  border: solid rgb(133, 202, 202);
+  margin: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  cursor: pointer;
+  background-color: rgb(1, 46, 46);
+}
+
+.reset-btn:hover {
+  background-color: rgb(133, 202, 202);
+  color: rgb(0, 0, 0);
+  border: solid 3px rgba(0, 78, 78);
+}
+
+.matrix-btn:hover {
+  background-color: rgb(133, 202, 202);
+  color: black;
+  border: solid 3px rgba(0, 78, 78);
+}
+
+.style {
+  background-image: url("images/Digital-Rain.gif");
+}
+
+.add {
+  width: 300px;
+  margin-left: 70px;
+}
+
+.bodystyle {
+  background-image: url("images/ezgif.com-video-to.gif");
+  background-size: cover;
+}
+.stylebox {
+  background-color: rgb(224, 224, 224);
+  color: rgb(0, 0, 0);
+  border: solid 3px rgb(24, 24, 24);
+}
+
+.stylebox:hover {
+  background-color: rgb(70, 70, 70);
+  color: rgb(255, 255, 255);
+  border: solid 3px rgb(255, 255, 255);
+}
