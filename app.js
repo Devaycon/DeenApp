@@ -9,7 +9,7 @@ const body = document.querySelector("body");
 const matrixButton = document.querySelector("[data-id='matrix-btn']");
 
 // IMAGES VARIABLE
-let images = [
+let images1 = [
   "images/New folder/pngwing.com.png",
   "images/New folder/pngwing.com(1).png",
   "images/New folder/pngwing.com(2).png",
@@ -25,12 +25,43 @@ let images = [
   "images/New folder/pngwing.com(12).png",
 ];
 
-// EVENTLISTENERS / FUNCTIONS
+let images2 = [
+  "Quran/pngwing.com(16).png",
+  "Quran/pngwing.com(17).png",
+  "Quran/pngwing.com(18).png",
+  "Quran/pngwing.com(19).png",
+  "Quran/pngwing.com(20).png",
+  "Quran/pngwing.com(21).png",
+  "Quran/pngwing.com(23).png",
+];
+
+let images3 = [
+  "mosque/pngwing.com.png",
+  "mosque/pngwing.com(1).png",
+  "mosque/pngwing.com(2).png",
+  "mosque/pngwing.com(3).png",
+  "mosque/pngwing.com(4).png",
+  "mosque/pngwing.com(5).png",
+  "mosque/pngwing.com(6).png",
+  "mosque/pngwing.com(7).png",
+];
+
+let images4 = [
+  "jihad/pngwing.com(8).png",
+  "jihad/pngwing.com(9).png",
+  "jihad/pngwing.com(10).png",
+  "jihad/pngwing.com(11).png",
+  "jihad/pngwing.com(12).png",
+  "jihad/pngwing.com(13).png",
+  "jihad/pngwing.com(14).png",
+  "jihad/pngwing.com(15).png",
+];
+// BOX FUNCTIONS
 
 function test1() {
   box1.addEventListener("click", () => {
-    let randomIndex = Math.floor(Math.random() * images.length);
-    let randomImages = images.at(randomIndex);
+    let randomIndex = Math.floor(Math.random() * images1.length);
+    let randomImages = images1.at(randomIndex);
     let imgElement = document.createElement("img");
     imgElement.src = randomImages;
     imgElement.alt = "islam";
@@ -47,8 +78,8 @@ function test1() {
 
 function test2() {
   box2.addEventListener("click", () => {
-    let randomIndex = Math.floor(Math.random() * images.length);
-    let randomImages = images.at(randomIndex);
+    let randomIndex = Math.floor(Math.random() * images2.length);
+    let randomImages = images2.at(randomIndex);
     let imgElement = document.createElement("img");
     imgElement.src = randomImages;
     imgElement.alt = "islam";
@@ -64,8 +95,8 @@ function test2() {
 
 function test3() {
   box3.addEventListener("click", () => {
-    let randomIndex = Math.floor(Math.random() * images.length);
-    let randomImages = images.at(randomIndex);
+    let randomIndex = Math.floor(Math.random() * images3.length);
+    let randomImages = images3.at(randomIndex);
     let imgElement = document.createElement("img");
     imgElement.src = randomImages;
     imgElement.alt = "islam";
@@ -76,6 +107,41 @@ function test3() {
       box3.removeChild(box3.firstChild).appendChild(imgElement);
     }
     box3.appendChild(imgElement);
+  });
+}
+
+function test4() {
+  box4.addEventListener("click", () => {
+    let randomIndex = Math.floor(Math.random() * images4.length);
+    let randomImages = images4.at(randomIndex);
+    let imgElement = document.createElement("img");
+    imgElement.src = randomImages;
+    imgElement.alt = "islam";
+    imgElement.width = 150;
+    imgElement.height = 150;
+
+    if (box4.hasChildNodes()) {
+      box4.removeChild(box4.firstChild).appendChild(imgElement);
+    }
+    box4.appendChild(imgElement);
+  });
+}
+
+// BUTTON FUNCTIONS
+
+function testButton() {
+  resetButton.addEventListener("click", () => {
+    if (
+      box1.hasChildNodes() &&
+      box4.hasChildNodes() &&
+      box4.hasChildNodes() &&
+      box4.hasChildNodes()
+    ) {
+      box1.removeChild(box1.firstChild);
+      box2.removeChild(box2.firstChild);
+      box3.removeChild(box3.firstChild);
+      box4.removeChild(box4.firstChild);
+    }
   });
 }
 
@@ -93,38 +159,6 @@ function testButton2() {
   });
 }
 
-function test4() {
-  box4.addEventListener("click", () => {
-    let randomIndex = Math.floor(Math.random() * images.length);
-    let randomImages = images.at(randomIndex);
-    let imgElement = document.createElement("img");
-    imgElement.src = randomImages;
-    imgElement.alt = "islam";
-    imgElement.width = 150;
-    imgElement.height = 150;
-
-    if (box4.hasChildNodes()) {
-      box4.removeChild(box4.firstChild).appendChild(imgElement);
-    }
-    box4.appendChild(imgElement);
-  });
-}
-
-function testButton() {
-  resetButton.addEventListener("click", () => {
-    if (
-      box1.hasChildNodes() &&
-      box4.hasChildNodes() &&
-      box4.hasChildNodes() &&
-      box4.hasChildNodes()
-    ) {
-      box1.removeChild(box1.firstChild);
-      box2.removeChild(box2.firstChild);
-      box3.removeChild(box3.firstChild);
-      box4.removeChild(box4.firstChild);
-    }
-  });
-}
 // INITIALISATION OF FUNCTIONS
 test1();
 test2();
