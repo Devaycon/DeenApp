@@ -34,11 +34,11 @@ function test1() {
     let imgElement = document.createElement("img");
     imgElement.src = randomImages;
     imgElement.alt = "islam";
-    imgElement.width = 200;
-    imgElement.height = 200;
+    imgElement.width = 150;
+    imgElement.height = 150;
 
     if (box1.hasChildNodes()) {
-      return;
+      box1.removeChild(box1.firstChild).appendChild(imgElement);
     }
 
     box1.appendChild(imgElement);
@@ -52,11 +52,11 @@ function test2() {
     let imgElement = document.createElement("img");
     imgElement.src = randomImages;
     imgElement.alt = "islam";
-    imgElement.width = 200;
-    imgElement.height = 200;
+    imgElement.width = 150;
+    imgElement.height = 150;
 
     if (box2.hasChildNodes()) {
-      return;
+      box2.removeChild(box2.firstChild).appendChild(imgElement);
     }
     box2.appendChild(imgElement);
   });
@@ -69,11 +69,11 @@ function test3() {
     let imgElement = document.createElement("img");
     imgElement.src = randomImages;
     imgElement.alt = "islam";
-    imgElement.width = 200;
-    imgElement.height = 200;
+    imgElement.width = 150;
+    imgElement.height = 150;
 
     if (box3.hasChildNodes()) {
-      return;
+      box3.removeChild(box3.firstChild).appendChild(imgElement);
     }
     box3.appendChild(imgElement);
   });
@@ -100,11 +100,11 @@ function test4() {
     let imgElement = document.createElement("img");
     imgElement.src = randomImages;
     imgElement.alt = "islam";
-    imgElement.width = 200;
-    imgElement.height = 200;
+    imgElement.width = 150;
+    imgElement.height = 150;
 
     if (box4.hasChildNodes()) {
-      return;
+      box4.removeChild(box4.firstChild).appendChild(imgElement);
     }
     box4.appendChild(imgElement);
   });
@@ -132,3 +132,4 @@ test3();
 test4();
 testButton();
 testButton2();
+
